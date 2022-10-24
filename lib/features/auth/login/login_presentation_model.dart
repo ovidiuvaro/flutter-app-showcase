@@ -1,3 +1,4 @@
+import 'package:flutter_demo/core/helpers.dart';
 import 'package:flutter_demo/features/auth/login/login_initial_params.dart';
 
 /// Model used by presenter, contains fields that are relevant to presenters and implements ViewModel to expose data to view (page)
@@ -19,7 +20,8 @@ class LoginPresentationModel implements LoginViewModel {
   final String password;
 
   @override
-  bool get isLoginEnabled => username.isNotEmpty && password.isNotEmpty;
+  bool get isLoginEnabled =>
+      validateUsername(username) && validatePassword(password);
 
   LoginPresentationModel copyWith({String? username, String? password}) {
     return LoginPresentationModel._(

@@ -8,8 +8,14 @@ T? doNothing<T>() {
 }
 
 /// shows dialog with "not implemented" message. its var so that it can be replaced for tests
-void Function({BuildContext? context, String? message}) notImplemented = ({String? message, BuildContext? context}) {
-  logError(UnimplementedError('not implemented${message == null ? '' : ':\n$message'}'), StackTrace.current);
+void Function({BuildContext? context, String? message}) notImplemented =
+    ({String? message, BuildContext? context}) {
+  logError(
+    UnimplementedError(
+      'not implemented${message == null ? '' : ':\n$message'}',
+    ),
+    StackTrace.current,
+  );
   showDialog(
     context: context ?? AppNavigator.navigatorKey.currentContext!,
     builder: (context) => AlertDialog(
@@ -28,3 +34,17 @@ void Function({BuildContext? context, String? message}) notImplemented = ({Strin
 /// method that allows suppressing the `unused-code` metric
 /// https://github.com/dart-code-checker/dart-code-metrics/pull/929
 void suppressUnusedCodeWarning(dynamic anything) => doNothing();
+
+bool validatePassword(String value) {
+  const pattern =
+      r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$';
+  final regExp = RegExp(pattern);
+  return regExp.hasMatch(value);
+}
+
+bool validateUsername(String value) {
+  const pattern =
+      r'^[a-zA-Z0-9](_(?!(\.|_))|\.(?!(_|\.))|[a-zA-Z0-9]){6,18}[a-zA-Z0-9]$';
+  final regExp = RegExp(pattern);
+  return regExp.hasMatch(value);
+}
