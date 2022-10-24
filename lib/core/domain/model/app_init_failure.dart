@@ -1,8 +1,7 @@
 import 'package:flutter_demo/core/domain/model/displayable_failure.dart';
 
 class AppInitFailure implements HasDisplayableFailure {
-  // ignore: avoid_field_initializers_in_const_classes
-  const AppInitFailure.unknown([this.cause]) : type = AppInitFailureType.Unknown;
+  AppInitFailure.unknown([this.cause]) : type = AppInitFailureType.Unknown;
 
   final AppInitFailureType type;
   final Object? cause;
