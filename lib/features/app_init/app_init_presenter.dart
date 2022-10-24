@@ -36,7 +36,7 @@ class AppInitPresenter extends Cubit<AppInitViewModel>
 
   Future<void> onInit() async {
     await await appInitUseCase
-        .execute() //
+        .execute()
         .observeStatusChanges(
           (result) => emit(_model.copyWith(appInitResult: result)),
         )
