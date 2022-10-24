@@ -44,15 +44,17 @@ class _LoginPageState extends State<LoginPage>
               ),
               const SizedBox(height: 16),
               stateObserver(
-                builder: (context, state) => ElevatedButton(
-                  onPressed: state.isLoginEnabled
-                      ? () => presenter.login(
-                            username: state.username,
-                            password: state.password,
-                          )
-                      : null,
-                  child: Text(appLocalizations.logInAction),
-                ),
+                builder: (context, state) => state.isLoading
+                    ? const CircularProgressIndicator()
+                    : ElevatedButton(
+                        onPressed: state.isLoginEnabled
+                            ? () => presenter.login(
+                                  username: state.username,
+                                  password: state.password,
+                                )
+                            : null,
+                        child: Text(appLocalizations.logInAction),
+                      ),
               ),
             ],
           ),

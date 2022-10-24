@@ -34,6 +34,9 @@ class LoginPresentationModel implements LoginViewModel {
   bool get isLoginEnabled =>
       validateUsername(username) && validatePassword(password);
 
+  @override
+  bool get isLoading => appLoginResult.isPending();
+
   LoginPresentationModel copyWith({
     FutureResult<Either<LogInFailure, User>>? appLoginResult,
     String? username,
@@ -49,6 +52,8 @@ class LoginPresentationModel implements LoginViewModel {
 
 /// Interface to expose fields used by the view (page).
 abstract class LoginViewModel {
+  bool get isLoading;
+
   bool get isLoginEnabled;
 
   String get username;
