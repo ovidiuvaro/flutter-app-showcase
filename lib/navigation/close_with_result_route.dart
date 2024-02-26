@@ -1,4 +1,4 @@
-import 'package:flutter_demo/navigation/app_navigator.dart';
+import 'package:luca/navigation/app_navigator.dart';
 
 mixin CloseWithResultRoute<T> {
   AppNavigator get appNavigator;

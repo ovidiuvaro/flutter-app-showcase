@@ -1,4 +1,4 @@
-import 'package:flutter_demo/core/domain/model/displayable_failure.dart';
+import 'package:luca/core/domain/model/displayable_failure.dart';
 
 class AppLoginFailure implements HasDisplayableFailure {
   AppLoginFailure.unknown([this.cause]) : type = AppLoginFailureType.Unknown;

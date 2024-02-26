@@ -1,10 +1,10 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:dartz/dartz.dart';
-import 'package:flutter_demo/core/domain/model/app_init_failure.dart';
-import 'package:flutter_demo/core/domain/model/user.dart';
-import 'package:flutter_demo/features/app_init/app_init_initial_params.dart';
-import 'package:flutter_demo/features/app_init/app_init_presentation_model.dart';
-import 'package:flutter_demo/features/app_init/app_init_presenter.dart';
+import 'package:luca/core/domain/model/app_init_failure.dart';
+import 'package:luca/core/domain/model/user.dart';
+import 'package:luca/features/app_init/app_init_initial_params.dart';
+import 'package:luca/features/app_init/app_init_presentation_model.dart';
+import 'package:luca/features/app_init/app_init_presenter.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/core/utils/logging.dart';
-import 'package:flutter_demo/navigation/app_navigator.dart';
+import 'package:luca/core/utils/logging.dart';
+import 'package:luca/navigation/app_navigator.dart';
 
 /// does... nothing ;)
 T? doNothing<T>() {

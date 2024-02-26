@@ -1,10 +1,10 @@
-import 'package:flutter_demo/dependency_injection/app_component.dart';
-import 'package:flutter_demo/features/auth/domain/use_cases/log_in_use_case.dart';
-import 'package:flutter_demo/features/auth/login/login_initial_params.dart';
-import 'package:flutter_demo/features/auth/login/login_navigator.dart';
-import 'package:flutter_demo/features/auth/login/login_page.dart';
-import 'package:flutter_demo/features/auth/login/login_presentation_model.dart';
-import 'package:flutter_demo/features/auth/login/login_presenter.dart';
+import 'package:luca/dependency_injection/app_component.dart';
+import 'package:luca/features/auth/domain/use_cases/log_in_use_case.dart';
+import 'package:luca/features/auth/login/login_initial_params.dart';
+import 'package:luca/features/auth/login/login_navigator.dart';
+import 'package:luca/features/auth/login/login_page.dart';
+import 'package:luca/features/auth/login/login_presentation_model.dart';
+import 'package:luca/features/auth/login/login_presenter.dart';
 //DO-NOT-REMOVE APP_COMPONENT_IMPORTS
 
 /// registers all the dependencies in dependency graph in get_it package

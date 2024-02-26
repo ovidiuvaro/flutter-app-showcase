@@ -3,7 +3,8 @@ import "package:recase/recase.dart";
 
 Future<void> run(HookContext context) async {
   var pageName = (context.vars["page_name"] as String? ?? "").trim().pascalCase;
-  final featureName = (context.vars["feature_name"] as String? ?? "").trim().snakeCase;
+  final featureName =
+      (context.vars["feature_name"] as String? ?? "").trim().snakeCase;
   var subdirectory = (context.vars["subdirectory"] as String? ?? "").trim();
 
   if (pageName.isEmpty) {
@@ -41,7 +42,7 @@ Future<void> run(HookContext context) async {
   context.vars = {
     ...context.vars,
     ...context.vars,
-    "app_package": "flutter_demo",
+    "app_package": "luca",
     "import_path": "${featurePath}",
     "stem": "${stem}",
     //class names
@@ -61,11 +62,15 @@ Future<void> run(HookContext context) async {
     // absolute paths
     "page_absolute_path": "../lib/${featurePath}/$pageFileName",
     "presenter_absolute_path": "../lib/${featurePath}/$presenterFileName",
-    "presentation_model_absolute_path": "../lib/${featurePath}/$presentationModelFileName",
+    "presentation_model_absolute_path":
+        "../lib/${featurePath}/$presentationModelFileName",
     "navigator_absolute_path": "../lib/${featurePath}/$navigatorFileName",
-    "initial_params_absolute_path": "../lib/${featurePath}/$initialParamsFileName",
-    "page_test_absolute_path": "../test/${featureTestPath}/pages/$pageTestFileName",
-    "presenter_test_absolute_path": "../test/${featureTestPath}/presenters/$presenterTestFileName",
+    "initial_params_absolute_path":
+        "../lib/${featurePath}/$initialParamsFileName",
+    "page_test_absolute_path":
+        "../test/${featureTestPath}/pages/$pageTestFileName",
+    "presenter_test_absolute_path":
+        "../test/${featureTestPath}/presenters/$presenterTestFileName",
     'feature': featureName,
   };
   context.logger.info("Generating page, variables: ${context.vars}");

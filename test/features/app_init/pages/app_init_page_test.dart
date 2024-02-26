@@ -1,12 +1,12 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter_demo/core/domain/stores/user_store.dart';
-import 'package:flutter_demo/dependency_injection/app_component.dart';
-import 'package:flutter_demo/features/app_init/app_init_initial_params.dart';
-import 'package:flutter_demo/features/app_init/app_init_navigator.dart';
-import 'package:flutter_demo/features/app_init/app_init_page.dart';
-import 'package:flutter_demo/features/app_init/app_init_presentation_model.dart';
-import 'package:flutter_demo/features/app_init/app_init_presenter.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:luca/core/domain/stores/user_store.dart';
+import 'package:luca/dependency_injection/app_component.dart';
+import 'package:luca/features/app_init/app_init_initial_params.dart';
+import 'package:luca/features/app_init/app_init_navigator.dart';
+import 'package:luca/features/app_init/app_init_page.dart';
+import 'package:luca/features/app_init/app_init_presentation_model.dart';
+import 'package:luca/features/app_init/app_init_presenter.dart';
 import 'package:mocktail/mocktail.dart';
 
 import '../../../test_utils/golden_tests_utils.dart';
@@ -40,7 +40,8 @@ Future<void> main() async {
     "app_init_page",
     setUp: () async {
       _initMvp();
-      when(() => AppInitMocks.appInitUseCase.execute()).thenAnswer((_) => successFuture(unit));
+      when(() => AppInitMocks.appInitUseCase.execute())
+          .thenAnswer((_) => successFuture(unit));
     },
     pageBuilder: () => page,
   );

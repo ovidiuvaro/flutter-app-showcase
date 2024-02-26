@@ -1,4 +1,4 @@
-package io.appflate.flutter_demo.flutter_demo
+package io.appflate.luca.luca
 
 import io.flutter.embedding.android.FlutterActivity
 

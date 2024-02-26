@@ -1,18 +1,20 @@
 import 'package:bloc_test/bloc_test.dart';
-import 'package:flutter_demo/core/domain/model/app_init_failure.dart';
-import 'package:flutter_demo/core/domain/use_cases/app_init_use_case.dart';
-import 'package:flutter_demo/features/app_init/app_init_initial_params.dart';
-import 'package:flutter_demo/features/app_init/app_init_navigator.dart';
-import 'package:flutter_demo/features/app_init/app_init_presentation_model.dart';
-import 'package:flutter_demo/features/app_init/app_init_presenter.dart';
+import 'package:luca/core/domain/model/app_init_failure.dart';
+import 'package:luca/core/domain/use_cases/app_init_use_case.dart';
+import 'package:luca/features/app_init/app_init_initial_params.dart';
+import 'package:luca/features/app_init/app_init_navigator.dart';
+import 'package:luca/features/app_init/app_init_presentation_model.dart';
+import 'package:luca/features/app_init/app_init_presenter.dart';
 import 'package:mocktail/mocktail.dart';
 //DO-NOT-REMOVE IMPORTS_MOCK_DEFINITIONS
 
 // MVP
 
-class MockAppInitPresenter extends MockCubit<AppInitViewModel> implements AppInitPresenter {}
+class MockAppInitPresenter extends MockCubit<AppInitViewModel>
+    implements AppInitPresenter {}
 
-class MockAppInitPresentationModel extends Mock implements AppInitPresentationModel {}
+class MockAppInitPresentationModel extends Mock
+    implements AppInitPresentationModel {}
 
 class MockAppInitInitialParams extends Mock implements AppInitInitialParams {}
 

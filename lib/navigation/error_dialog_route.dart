@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/core/domain/model/displayable_failure.dart';
-import 'package:flutter_demo/core/utils/logging.dart';
-import 'package:flutter_demo/localization/app_localizations_utils.dart';
-import 'package:flutter_demo/navigation/app_navigator.dart';
+import 'package:luca/core/domain/model/displayable_failure.dart';
+import 'package:luca/core/utils/logging.dart';
+import 'package:luca/localization/app_localizations_utils.dart';
+import 'package:luca/navigation/app_navigator.dart';
 
 mixin ErrorDialogRoute {
   Future<void> showError(DisplayableFailure failure, {BuildContext? context}) {

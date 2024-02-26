@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter_demo/core/helpers.dart';
-import 'package:flutter_demo/core/utils/logging.dart';
+import 'package:luca/core/helpers.dart';
+import 'package:luca/core/utils/logging.dart';
 
 Either<L, R> success<L, R>(R r) => right(r);
 
@@ -48,7 +48,9 @@ extension FutureEither<L, R> on Future<Either<L, R>> {
     return (await this).leftMap(errorMapper);
   }
 
-  Future<Either<L, R2>> mapSuccess<R2>(R2 Function(R response) responseMapper) async {
+  Future<Either<L, R2>> mapSuccess<R2>(
+    R2 Function(R response) responseMapper,
+  ) async {
     return (await this).map(responseMapper);
   }
 

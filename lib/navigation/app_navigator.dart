@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/core/helpers.dart';
-import 'package:flutter_demo/core/utils/durations.dart';
-import 'package:flutter_demo/navigation/transitions/fade_in_page_transition.dart';
-import 'package:flutter_demo/navigation/transitions/slide_bottom_page_transition.dart';
+import 'package:luca/core/helpers.dart';
+import 'package:luca/core/utils/durations.dart' as utils_duration;
+import 'package:luca/navigation/transitions/fade_in_page_transition.dart';
+import 'package:luca/navigation/transitions/slide_bottom_page_transition.dart';
 
 class AppNavigator {
   AppNavigator() {
@@ -38,7 +38,8 @@ class AppNavigator {
   }) =>
       _navigator(context).canPop() ? _navigator(context).pop(result) : result;
 
-  void popUntilRoot(BuildContext context) => _navigator(context).popUntil((route) => route.isFirst);
+  void popUntilRoot(BuildContext context) =>
+      _navigator(context).popUntil((route) => route.isFirst);
 
   void popUntilPageWithName(
     String title, {
@@ -58,7 +59,7 @@ Route<T> fadeInRoute<T>(
     PageRouteBuilder<T>(
       opaque: opaque,
       transitionDuration: Duration(
-        milliseconds: durationMillis ?? Durations.medium,
+        milliseconds: durationMillis ?? utils_duration.Durations.medium,
       ),
       settings: RouteSettings(name: pageName ?? page.runtimeType.toString()),
       pageBuilder: _pageBuilder(page),
@@ -101,7 +102,7 @@ Route<T> slideBottomRoute<T>(
     PageRouteBuilder<T>(
       opaque: opaque,
       transitionDuration: Duration(
-        milliseconds: durationMillis ?? Durations.medium,
+        milliseconds: durationMillis ?? utils_duration.Durations.medium,
       ),
       fullscreenDialog: fullScreenDialog,
       settings: RouteSettings(name: pageName ?? page.runtimeType.toString()),
@@ -117,4 +118,6 @@ RoutePageBuilder _pageBuilder(Widget page) => (
         page;
 
 NavigatorState _navigator(BuildContext? context, {bool useRoot = false}) =>
-    (useRoot || context == null) ? AppNavigator.navigatorKey.currentState! : Navigator.of(context);
+    (useRoot || context == null)
+        ? AppNavigator.navigatorKey.currentState!
+        : Navigator.of(context);

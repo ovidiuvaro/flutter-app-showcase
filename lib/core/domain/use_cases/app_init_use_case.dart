@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter_demo/core/domain/model/app_init_failure.dart';
-import 'package:flutter_demo/core/utils/either_extensions.dart';
+import 'package:luca/core/domain/model/app_init_failure.dart';
+import 'package:luca/core/utils/either_extensions.dart';
 
 /// Takes care of the entire app initialization, populating stores with values, setting up the state the entire app
 class AppInitUseCase {

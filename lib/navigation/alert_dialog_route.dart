@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/localization/app_localizations_utils.dart';
-import 'package:flutter_demo/navigation/app_navigator.dart';
+import 'package:luca/localization/app_localizations_utils.dart';
+import 'package:luca/navigation/app_navigator.dart';
 
 //ignore: unused-code
 mixin AlertDialogRoute {

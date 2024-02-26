@@ -1,10 +1,10 @@
-import 'package:flutter_demo/core/domain/use_cases/app_init_use_case.dart';
-import 'package:flutter_demo/dependency_injection/app_component.dart';
-import 'package:flutter_demo/features/app_init/app_init_initial_params.dart';
-import 'package:flutter_demo/features/app_init/app_init_navigator.dart';
-import 'package:flutter_demo/features/app_init/app_init_page.dart';
-import 'package:flutter_demo/features/app_init/app_init_presentation_model.dart';
-import 'package:flutter_demo/features/app_init/app_init_presenter.dart';
+import 'package:luca/core/domain/use_cases/app_init_use_case.dart';
+import 'package:luca/dependency_injection/app_component.dart';
+import 'package:luca/features/app_init/app_init_initial_params.dart';
+import 'package:luca/features/app_init/app_init_navigator.dart';
+import 'package:luca/features/app_init/app_init_page.dart';
+import 'package:luca/features/app_init/app_init_presentation_model.dart';
+import 'package:luca/features/app_init/app_init_presenter.dart';
 //DO-NOT-REMOVE APP_COMPONENT_IMPORTS
 
 /// registers all the dependencies in dependency graph in get_it package
@@ -58,7 +58,8 @@ void _configureMvp() {
         ..registerFactory<AppInitNavigator>(
           () => AppInitNavigator(getIt()),
         )
-        ..registerFactoryParam<AppInitPresentationModel, AppInitInitialParams, dynamic>(
+        ..registerFactoryParam<AppInitPresentationModel, AppInitInitialParams,
+            dynamic>(
           (params, _) => AppInitPresentationModel.initial(params),
         )
         ..registerFactoryParam<AppInitPresenter, AppInitInitialParams, dynamic>(

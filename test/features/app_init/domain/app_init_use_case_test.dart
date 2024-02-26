@@ -1,5 +1,5 @@
-import 'package:flutter_demo/core/domain/use_cases/app_init_use_case.dart';
-import 'package:flutter_demo/dependency_injection/app_component.dart';
+import 'package:luca/core/domain/use_cases/app_init_use_case.dart';
+import 'package:luca/dependency_injection/app_component.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

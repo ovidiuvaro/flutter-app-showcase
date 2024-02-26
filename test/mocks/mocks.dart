@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/core/domain/model/displayable_failure.dart';
-import 'package:flutter_demo/core/utils/periodic_task_executor.dart';
-import 'package:flutter_demo/navigation/app_navigator.dart';
+import 'package:luca/core/domain/model/displayable_failure.dart';
+import 'package:luca/core/utils/periodic_task_executor.dart';
+import 'package:luca/navigation/app_navigator.dart';
 import 'package:mocktail/mocktail.dart';
 
 import '../features/app_init/mocks/app_init_mocks.dart';

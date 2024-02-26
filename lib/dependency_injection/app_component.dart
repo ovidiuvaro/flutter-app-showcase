@@ -1,8 +1,10 @@
-import 'package:flutter_demo/core/domain/stores/user_store.dart';
-import 'package:flutter_demo/features/app_init/dependency_injection/feature_component.dart' as app_init;
-import 'package:flutter_demo/features/auth/dependency_injection/feature_component.dart' as auth;
-import 'package:flutter_demo/navigation/app_navigator.dart';
 import 'package:get_it/get_it.dart';
+import 'package:luca/core/domain/stores/user_store.dart';
+import 'package:luca/features/app_init/dependency_injection/feature_component.dart'
+    as app_init;
+import 'package:luca/features/auth/dependency_injection/feature_component.dart'
+    as auth;
+import 'package:luca/navigation/app_navigator.dart';
 //DO-NOT-REMOVE APP_COMPONENT_IMPORTS
 
 final getIt = GetIt.instance;

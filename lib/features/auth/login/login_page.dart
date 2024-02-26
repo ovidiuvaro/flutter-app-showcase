@@ -1,10 +1,10 @@
 // ignore: unused_import
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/core/utils/mvp_extensions.dart';
-import 'package:flutter_demo/features/auth/login/login_presentation_model.dart';
-import 'package:flutter_demo/features/auth/login/login_presenter.dart';
-import 'package:flutter_demo/localization/app_localizations_utils.dart';
+import 'package:luca/core/utils/mvp_extensions.dart';
+import 'package:luca/features/auth/login/login_presentation_model.dart';
+import 'package:luca/features/auth/login/login_presenter.dart';
+import 'package:luca/localization/app_localizations_utils.dart';
 
 class LoginPage extends StatefulWidget with HasPresenter<LoginPresenter> {
   const LoginPage({
@@ -23,7 +23,23 @@ class _LoginPageState extends State<LoginPage>
     with PresenterStateMixin<LoginViewModel, LoginPresenter, LoginPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
-        body: Padding(
+        body: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Color(0xff77a1d3),
+                Color(0xff79cbca),
+                Color(0xffe684ae),
+              ],
+              stops: [
+                0,
+                0.5,
+                1,
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+          ),
           padding: const EdgeInsets.all(32.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -46,14 +62,25 @@ class _LoginPageState extends State<LoginPage>
               stateObserver(
                 builder: (context, state) => state.isLoading
                     ? const CircularProgressIndicator()
-                    : ElevatedButton(
-                        onPressed: state.isLoginEnabled
-                            ? () => presenter.login(
-                                  username: state.username,
-                                  password: state.password,
-                                )
-                            : null,
-                        child: Text(appLocalizations.logInAction),
+                    : Row(
+                        children: [
+                          Expanded(
+                            child: ElevatedButton(
+                              onPressed: state.isLoginEnabled
+                                  ? () => presenter.login(
+                                        username: state.username,
+                                        password: state.password,
+                                      )
+                                  : null,
+                              child: Text(
+                                appLocalizations.logInAction,
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
               ),
             ],

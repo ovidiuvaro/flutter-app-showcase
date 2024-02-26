@@ -1,18 +1,18 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
-import 'package:flutter_demo/core/domain/model/user.dart';
-import 'package:flutter_demo/core/domain/stores/user_store.dart';
-import 'package:flutter_demo/core/domain/use_cases/app_init_use_case.dart';
-import 'package:flutter_demo/core/utils/bloc_extensions.dart';
-import 'package:flutter_demo/core/utils/either_extensions.dart';
-import 'package:flutter_demo/core/utils/mvp_extensions.dart';
-import 'package:flutter_demo/dependency_injection/app_component.dart';
-import 'package:flutter_demo/features/app_init/app_init_navigator.dart';
-import 'package:flutter_demo/features/app_init/app_init_presentation_model.dart';
-import 'package:flutter_demo/features/auth/login/login_initial_params.dart';
-import 'package:flutter_demo/features/auth/login/login_page.dart';
-import 'package:flutter_demo/navigation/app_navigator.dart';
+import 'package:luca/core/domain/model/user.dart';
+import 'package:luca/core/domain/stores/user_store.dart';
+import 'package:luca/core/domain/use_cases/app_init_use_case.dart';
+import 'package:luca/core/utils/bloc_extensions.dart';
+import 'package:luca/core/utils/either_extensions.dart';
+import 'package:luca/core/utils/mvp_extensions.dart';
+import 'package:luca/dependency_injection/app_component.dart';
+import 'package:luca/features/app_init/app_init_navigator.dart';
+import 'package:luca/features/app_init/app_init_presentation_model.dart';
+import 'package:luca/features/auth/login/login_initial_params.dart';
+import 'package:luca/features/auth/login/login_page.dart';
+import 'package:luca/navigation/app_navigator.dart';
 
 class AppInitPresenter extends Cubit<AppInitViewModel>
     with CubitToCubitCommunicationMixin<AppInitViewModel> {

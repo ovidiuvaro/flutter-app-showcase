@@ -1,4 +1,4 @@
-import 'package:flutter_demo/localization/app_localizations_utils.dart';
+import 'package:luca/localization/app_localizations_utils.dart';
 
 /// A failure with the title and message that could be easly displayed as a dialog or snackbar
 class DisplayableFailure {

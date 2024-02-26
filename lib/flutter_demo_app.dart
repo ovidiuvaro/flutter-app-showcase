@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/dependency_injection/app_component.dart';
-import 'package:flutter_demo/features/app_init/app_init_initial_params.dart';
-import 'package:flutter_demo/features/app_init/app_init_page.dart';
-import 'package:flutter_demo/navigation/app_navigator.dart';
-import 'package:flutter_demo/utils/locale_resolution.dart';
+import 'package:luca/dependency_injection/app_component.dart';
+import 'package:luca/features/app_init/app_init_initial_params.dart';
+import 'package:luca/features/app_init/app_init_page.dart';
+import 'package:luca/navigation/app_navigator.dart';
+import 'package:luca/utils/locale_resolution.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 

@@ -1,11 +1,11 @@
 import 'package:bloc/bloc.dart';
-import 'package:flutter_demo/core/utils/bloc_extensions.dart';
-import 'package:flutter_demo/core/utils/either_extensions.dart';
-import 'package:flutter_demo/core/utils/mvp_extensions.dart';
-import 'package:flutter_demo/features/auth/domain/use_cases/log_in_use_case.dart';
-import 'package:flutter_demo/features/auth/login/login_navigator.dart';
-import 'package:flutter_demo/features/auth/login/login_presentation_model.dart';
-import 'package:flutter_demo/localization/app_localizations_utils.dart';
+import 'package:luca/core/utils/bloc_extensions.dart';
+import 'package:luca/core/utils/either_extensions.dart';
+import 'package:luca/core/utils/mvp_extensions.dart';
+import 'package:luca/features/auth/domain/use_cases/log_in_use_case.dart';
+import 'package:luca/features/auth/login/login_navigator.dart';
+import 'package:luca/features/auth/login/login_presentation_model.dart';
+import 'package:luca/localization/app_localizations_utils.dart';
 
 class LoginPresenter extends Cubit<LoginViewModel>
     with CubitToCubitCommunicationMixin<LoginViewModel> {

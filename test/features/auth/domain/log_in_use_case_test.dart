@@ -1,7 +1,7 @@
-import 'package:flutter_demo/core/utils/either_extensions.dart';
-import 'package:flutter_demo/dependency_injection/app_component.dart';
-import 'package:flutter_demo/features/auth/domain/use_cases/log_in_use_case.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:luca/core/utils/either_extensions.dart';
+import 'package:luca/dependency_injection/app_component.dart';
+import 'package:luca/features/auth/domain/use_cases/log_in_use_case.dart';
 
 import '../../../mocks/mocks.dart';
 
@@ -18,7 +18,8 @@ void main() {
       // GIVEN
 
       // WHEN
-      final result = await useCase.execute(username: "test", password: "test123");
+      final result =
+          await useCase.execute(username: "test", password: "test123");
 
       // THEN
       expect(result.isSuccess, true);

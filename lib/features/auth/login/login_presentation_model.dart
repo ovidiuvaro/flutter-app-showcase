@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter_demo/core/domain/model/user.dart';
-import 'package:flutter_demo/core/helpers.dart';
-import 'package:flutter_demo/core/utils/bloc_extensions.dart';
-import 'package:flutter_demo/features/auth/domain/model/log_in_failure.dart';
-import 'package:flutter_demo/features/auth/login/login_initial_params.dart';
+import 'package:luca/core/domain/model/user.dart';
+import 'package:luca/core/helpers.dart';
+import 'package:luca/core/utils/bloc_extensions.dart';
+import 'package:luca/features/auth/domain/model/log_in_failure.dart';
+import 'package:luca/features/auth/login/login_initial_params.dart';
 
 /// Model used by presenter, contains fields that are relevant to presenters and implements ViewModel to expose data to view (page)
 class LoginPresentationModel implements LoginViewModel {

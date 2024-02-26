@@ -1,6 +1,6 @@
-import 'package:flutter_demo/features/auth/login/login_initial_params.dart';
-import 'package:flutter_demo/features/auth/login/login_presentation_model.dart';
-import 'package:flutter_demo/features/auth/login/login_presenter.dart';
+import 'package:luca/features/auth/login/login_initial_params.dart';
+import 'package:luca/features/auth/login/login_presentation_model.dart';
+import 'package:luca/features/auth/login/login_presenter.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../mocks/auth_mock_definitions.dart';
